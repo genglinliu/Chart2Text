@@ -442,15 +442,15 @@ def getSubject(titleTokens, nerEntities):
     return entities, cleanTitle
 
 
-dataFiles = os.listdir('/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/data')
+dataFiles = os.listdir('../dataset/data')
 dataFiles.sort()
 #dataFiles = dataFiles[3800:3801]
 
-captionFiles = os.listdir('/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/captions')
+captionFiles = os.listdir('../dataset/captions')
 captionFiles.sort()
 #captionFiles = captionFiles[3800:3801]
 
-titleFiles = os.listdir('/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/titles')
+titleFiles = os.listdir('../dataset/titles')
 titleFiles.sort()
 #titleFiles = titleFiles[3800:3801]
 
@@ -493,9 +493,9 @@ simpleChartTypes = []
 complexChartTypes = []
 
 for m in range(len(dataFiles)):
-    dataPath = '/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/data/' + dataFiles[m]
-    captionPath = '/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/captions/' + captionFiles[m]
-    titlePath = '/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/titles/' + titleFiles[m]
+    dataPath = '../dataset/data/' + dataFiles[m]
+    captionPath = '../dataset/captions/' + captionFiles[m]
+    titlePath = '../dataset/titles/' + titleFiles[m]
     caption = openCaption(captionPath)
     title = openCaption(titlePath)
     df, cols, size, xAxis, yAxis, chartType = openData(dataPath)
@@ -778,19 +778,19 @@ def checkForParallelMultiColumn(axis, variant, arrayIndex):
                 parallelData.append([template, axis, tokenIndex])
 
 
-dataFiles = os.listdir('/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/multiColumn/data')
+dataFiles = os.listdir('../dataset/multiColumn/data')
 dataFiles.sort()
 
-captionFiles = os.listdir('/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/multiColumn/captions')
+captionFiles = os.listdir('../dataset/multiColumn/captions')
 captionFiles.sort()
 
-titleFiles = os.listdir('/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/multiColumn/titles')
+titleFiles = os.listdir('../dataset/multiColumn/titles')
 titleFiles.sort()
 
 for m in range(len(dataFiles)):
-    dataPath = '/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/multiColumn/data/' + dataFiles[m]
-    captionPath = '/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/multiColumn/captions/' + captionFiles[m]
-    titlePath = '/Users/genglinliu/Documents/GitHub/Chart2Text/dataset/multiColumn/titles/' + titleFiles[m]
+    dataPath = '../dataset/multiColumn/data/' + dataFiles[m]
+    captionPath = '../dataset/multiColumn/captions/' + captionFiles[m]
+    titlePath = '../dataset/multiColumn/titles/' + titleFiles[m]
     caption = openCaption(captionPath)
     title = openCaption(titlePath)
     df, cols, size, chartType = openMultiColumnData(dataPath)
