@@ -29,6 +29,23 @@ Chart type breakdown:
 
 Images available seperately at https://github.com/JasonObeid/Chart2TextImages due to large size ~1GB
 
+### (Added by Genglin) Step 0: Install environment
+
+Create a new conda environment and install the necessary packages
+
+`conda create --name chart2text`
+`conda activate chart2text`
+`cd Chart2Text`
+`pip install -r requirements.txt`
+
+Note that `en_core_web_md==2.2.5` cannot be installed with pip, instead install using the command 
+
+`python -m spacy download en_core_web_sm` 
+
+according to https://spacy.io/models/en 
+
+**(However if you have done all the preprocessing then this en_core_web_md package can be skipped, and you can jump to the `Generation` section of the readme to proceed.)**
+
 ### Step1: Cleaning dataset
 
 Clean the text within the chart titles and summaries
